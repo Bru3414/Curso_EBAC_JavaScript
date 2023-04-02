@@ -1,0 +1,252 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.conteiner, header nav {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header .conteiner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header {
+    padding: 16px 0 0;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 56px;
+}
+
+.submenu {
+    background-color: #fff;
+    display: none;
+    position: absolute;
+    border: 1px solid red;
+    border-radius: 5px;
+    width: 300px;
+    left: 0;
+    top: 100%;
+}
+
+.submenu li {
+    list-style: none;
+    display: block;
+    padding: 8px;
+}
+
+.submenu li a {
+    color: #000;
+    text-decoration: none;
+}
+
+.menu > li{
+    float: left;
+    list-style: none;
+    padding: 16px;
+    border-top: 4px solid transparent;
+    position: relative;
+}
+
+.clear {
+    clear: both;
+}
+
+.menu li:hover .submenu {
+    display: block;
+}
+
+.menu li:hover {
+    border-color: red;
+}
+
+header form input{
+    padding: 8px;
+    border: none;
+    border-bottom: 2px solid #000;
+    outline: none;
+}
+
+header form input:focus,
+header form input:hover {
+    border-color: red;
+}
+
+header form button {
+    padding: 8px;
+    background-color: red;
+    border: none;
+    border-radius: 5px;
+    margin-left: 8px;
+    cursor: pointer;
+}
+
+header form button:hover {
+    background-color: rgb(221, 17, 17);
+}
+
+.conteudo {
+    display: grid;
+    grid-template-columns: 70% 30%;
+}
+
+.noticia img {
+    max-width: 100%;
+}
+
+.destaque {
+    margin-bottom: 56px;
+}
+
+.destaque .noticia a {
+    display: flex;
+    font-size: 2em;
+}
+
+.destaque .noticia img {
+    margin-right: 8px;
+}
+
+section h2 {
+    margin-bottom: 32px;
+}
+
+aside {
+    padding-left: 40px;
+}
+
+aside .noticia {
+    margin-bottom: 24px;
+}
+
+.noticias {
+    display: grid;
+    grid-template-columns: repeat(3, 32.6%);
+    column-gap: 1%;
+    row-gap: 5%;
+}
+
+@media screen and (max-width: 767px) {
+    .conteudo {
+        display: block;
+    }
+
+    .conteiner {
+        max-width: 90%;
+    }
+
+    .destaque {
+        margin-bottom: 56px;
+    }
+    
+    .destaque .noticia a {
+        display: block;
+        font-size: 1.5em;
+    }
+    
+    .destaque .noticia img {
+        margin-right: 0;
+    }
+
+    .noticias {
+        display: block;
+    }
+
+    .noticias .noticia {
+        margin-bottom: 32px;
+    }
+
+    aside {
+        padding-left: 0;
+    }
+
+    header form {
+        display: flex;
+    }
+
+    header form input {
+        width: 120px;
+    }
+
+    header .conteiner {
+        flex-direction: column;
+    }
+
+    .submenu {
+        background-color: #fff;
+        display: block;
+        position: relative;
+        width: 100%;
+        border: none;
+    }
+    
+    .submenu li {
+        list-style: none;
+        display: block;
+        padding: 8px;
+    }
+    
+    .submenu li a {
+        color: rgb(53, 53, 218);
+        text-decoration: none;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .menu, .menu li {
+        width: 100%;
+        border: none;
+    }
+
+    .menu > li{
+        clear: both;
+        position: relative;
+    }
+
+    .botao-menu {
+        display: flex;
+        justify-content: center;
+        margin: 8px 0;
+    }
+
+    .botao-menu button {
+        padding: 8px;
+        background-color: rgb(82, 82, 216);
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        margin-left: 8px;
+        cursor: pointer;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+
+    .botao-menu {
+        display: none;
+    }
+
+    .destaque .noticia a {
+        font-size: 1.5em;
+    }
+
+    .conteiner {
+        width: 90%;
+    }
+
+    .noticias {
+        grid-template-columns: repeat(2, 49.5%);
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .botao-menu {
+        display: none;
+    }
+}
